@@ -133,35 +133,10 @@ cmd /c mklink /D %USERPROFILE%\.conda D:\Win\.conda
 rmdir %USERPROFILE%\.ssh
 
 cmd /c mklink /D %USERPROFILE%\.ssh D:\.ssh
-rmdi r%USERPROFILE%\Documents
+
+rmdir “%USERPROFILE%\Documents\Studio One\Presets\PreSonus\FX Chains”
 
 cmd /c mklink /D “%USERPROFILE%\Documents\Studio One\Presets\PreSonus\FX Chains” "D:\Documents\MySyncData\StudioOne6\FX Chains"
-
-# 允许当前用户在 PowerShell 中运行本地脚本，并要求从互联网下载的脚本必须经过签名。
-
-Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
-
-# 添加临时变量
-
-setx PATH "%PATH%;D:\WinInstall\Miniconda3\Scripts"
-
-setx PATH "%PATH%;D:\Win\Portable\ffmpeg\bin"
-# 更新变量
-
-. 'C:\Users\31245\Documents\WindowsPowerShell\profile.ps1'
-rmdir ~\.ssh
-
-```
-
-```
-
-VST
-
-rmdir "C:\ProgramData\LiquidSonics\Seventh Heaven Professional\Data"
-
-cmd /c mklink /D "C:\ProgramData\LiquidSonics\Seventh Heaven Professional\Data" "D:\Win\VST\LiquidSonics.Seventh.Heaven.Professional.v1.3.3.READ.NFO-R2R\Seventh Heaven Professional\Data"
-
-```
 
 ```
 
